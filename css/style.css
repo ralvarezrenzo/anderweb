@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+
+/* banner header*/
+.banner{
+    width: 100%;
+    height: 80vh;
+    max-height: 800px;
+    background-image: url(../img/banner-code.jpg);
+}
