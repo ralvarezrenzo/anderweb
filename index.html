@@ -9,27 +9,199 @@
    <link rel="stylesheet" href="css/prism.css">
 </head>
 <body>
-    <header>
+    <header class="header container-full">
         <nav>
             <div class="logo">
-                ANDERWEB
+              ANDERWEB
             </div>
-            <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">CSS</a></li>
-                <li><a href="">Javascript</a></li>
-                <li><a href="">Php</a></li>
+            <div class="btn-menu" id="btn-menu">
+              <div class="menu-toggle"></div>
+            </div>
+            <ul class="menu">
+              <li class="li-menu"><a href="#inicio" class="a-menu">INICIO</a></li>
+              <li class="li-menu"><a href="#javascript" class="a-menu">JAVASCRIPT</a></li>
+              <li class="li-menu"><a href="#php" class="a-menu">PHP</a></li>
+              <li class="li-menu"><a href="#ajax" class="a-menu">AJAX</a></li>
             </ul>
-        </nav>
+          </nav>
         <div class="banner">
-            <p>Ander Web</p>
-            <p>Introduccion a Javascript - PHP - Ajax</p>
+            <p class="banner-title">Ander Web</p>
+            <p class="banner-description">Ejemplos de Javascript - PHP - Ajax</p>
         </div>
     </header>
     <main class="main container">
         <section class="container-med">
-            
+            <div class="anderweb-container contenedores">
+                <h2 class="subtitles">¿Para que es esta Web?</h2>
+                <p class="textos">En esta Web daremos unos ejemplos practicos de JAVASCRIPT - PHP Y AJAX, en estos se daran su explicacion de para que sirven, sus funciones y codigo de ejemplo</p>
+            </div>
+            <div class="javascript contenedores" id="javascript">
+                <h2 class="subtitles">Javascript</h2>
+                <p class="textos">
+                    JavaScript es un lenguaje de programación o de secuencias de comandos que te permite implementar funciones complejas en páginas web, cada vez que una página web hace algo más que sentarse allí y mostrar información estática para que la veas, muestra oportunas actualizaciones de contenido, mapas interactivos, animación de Gráficos 2D/3D, desplazamiento de máquinas reproductoras de vídeo, etc., puedes apostar que probablemente JavaScript está involucrado. Es la tercera capa del pastel de las tecnologías web estándar, dos de las cuales (HTML y CSS) hemos cubierto con mucho más detalle en otras partes del Área de aprendizaje.
+                </p>
+                <h3> Ejemplo Array</h3>
+
+                <p class="textos">
+                    Los arrays son objetos similares a una lista cuyo prototipo proporciona métodos para efectuar operaciones de recorrido y de mutación. Tanto la longitud como el tipo de los elementos de un array son variables. Dado que la longitud de un array puede cambiar en cualquier momento, y los datos se pueden almacenar en ubicaciones no contiguas, no hay garantía de que los arrays de JavaScript sean densos; esto depende de cómo el programador elija usarlos. En general estas características son cómodas, pero si, en su caso particular, no resultan deseables, puede considerar el uso de arrays con tipo.
+                </p>
+                <p class="textos">
+                    Un array o arreglo en Javascript tiene varias maneras de declararse algunos ejemplos:
+
+Utilizando el constructor de array y el operador new:
+                </p>
+
+                <pre class="language-js line-numbers" style="white-space:pre-wrap;">
+                    <code>
+                        &lt;script&gt;
+                        var arr1 = new Array(); // declarando un array vacio
+                        var arr2 = new Array(5); // declarando un array de 5 elementos (su propiedad length está en 5)
+                        var arr3 = new Array(3,3); // declarando un array de 2 elementos [3,3]
+                        &lt;/script&gt;
+                    </code>
+                </pre>
+                <p class="textos">La manera anterior no está recomendada porque da lugar a ambiguedades (lo cual puede notarse en las dos últimas declaraciones).
+
+                    Una mejor manera de declarar arrays en Javascrip es utilizando la notación literal de Array, va el ejemplo:</p>
+
+                    <pre class="language-js line-numbers" style="white-space:pre-wrap;">
+                        <code>
+                            &lt;script&gt;
+                            var arr4 = [];  // declarando un array vacío
+                            var arr5 = [0,0,0,0,0];  // declarando un array de 5 elementos cuyos valores son 0
+                            var arr6 = [3,3];  // declarando un array de 2 elementos cuyos valores son 3 y 3
+                            &lt;/script&gt;
+                        </code>
+                    </pre>
+                    <h3>Conocer el tamaño de un array</h3>
+                    <p class="textos">Todos los arrays tienen una propiedad llamada length que permite saber su tamaño.
+                    </p>
+                    <pre class="language-js line-numbers" style="white-space:pre-wrap;">
+                        <code>
+                            &lt;script&gt;
+                            var arr7 = [1,2,3,4,5,6,7];
+                            log(arr7.length); // imprime 7 porque el array tiene 7 elementos.
+                            &lt;/script&gt;
+                        </code>
+                    </pre>
+                    <p class="textos">
+                        Hay que tener en cuenta que el length no es el índice de la última posición del array. Como las posiciones comienzan a indexarse desde 0 el índice de la última posición del array siempre puede calcularse utilizando length - 1
+                    </p>
+                    <pre class="language-js line-numbers" style="white-space:pre-wrap;">
+                        <code>
+                            &lt;script&gt;
+                            var arr8 = ["a","b","c"];
+                            log(arr8[arr8.length - 1]); // imprime "c", el último elemento del array
+                            &lt;/script&gt;
+                        </code>
+                    </pre>
+                    <h3>Accediendo a los objetos de un array</h3>
+                    <p>Veamos como podemos acceder a los diferentes elementos del array:</p>
+                    <pre class="language-js line-numbers" style="white-space:pre-wrap;">
+                        <code>
+                            &lt;script&gt;
+                            var arr = [1,2,3,4];
+                            log(arr[0]); // accediendo al primer elemento del array
+                            var  i;
+                            for(i = 0; i  &lt; arr.length ; i++) { // listando los elementos del array
+                              log('En la posición: ' + i + ' esta el elemento: ' +  arr[i]);
+                            }
+                            &lt;/script&gt;
+                        </code>
+                    </pre>
+                    <p class="textos"> OBSERVACION :Los índices de los arrays comienzan en 0</p>
+            </div>
+            <div class="php contenedores" id="php">
+                <h2 class="subtitles">PHP</h2>
+                <p class="textos">
+                    PHP es un lenguaje de procesador muy popular alrededor del mundo y es el principal lenguaje de programación utilizado por la mayoría de aplicaciones y sitios webs que encuentras hoy en día, es un lenguaje sumamente potente a la hora de desarrollar cualquier sitio web y es el preferido por cientos de programadores a nivel mundial.
+                </p>
+                <h3 class="sub-subtitle">Ejemplo Hellow World</h3>
+                <p class="textos">
+                    Ejemplo, un "Hola mundo" en conjunto a saber intercalar el código PHP y otros códigos (HTML, JavaScript, CSS, etc).
+
+                    Para ello, crearemos una carpeta dentro de "C:\xampp\htdocs\mis_apps\" que se llame "capitulo_1" y dentro de éste, un archivo llamado hola.php. A continuación escribiremos lo siguiente:   
+                </p>
+                <pre class="language-php">
+                    <code>
+                        &lt;?php
+                            
+                        echo "¡Hola mundo!";
+                        ?&gt;
+                    </code>
+                </pre>
+                <p class="textos">
+                    Vamos abrir nuestro explorador y entraremos a nuestra carpeta en donde este nuestros documentos
+                </p>
+                <p class="textos">Siempre que vayamos a escribir código PHP debemos comenzar con "<?php" y terminar con "?>", echo es una función PHP propia para imprimir en pantalla lo que siga entre " ". Si todo resultó bien, ¡felicidades!. Creaste tu primer código PHP dinámico.</p>
+            </div>
+            <div class="ajax contenedores" id="ajax">
+                <h2 class="subtitles">AJAX</h2>
+                <p class="description textos">
+                    AJAX significa Asynchronous JavaScript And XML. En pocas palabras, es el uso del objeto XMLHttpRequest para comunicarse con los servidores.
+
+                    Puede enviar y recibir información en varios formatos, incluidos JSON, XML, HTML y archivos de texto.
+
+                    El atractivo de AJAX es su naturaleza "asíncrona", lo que significa que puede comunicarse con el servidor, intercambiar datos y actualizar la página sin tener que recargar el navegador.
+                </p>
+                <h3 class="sub-subtitle">Ejemplo Solicitud Ajax</h3>
+                <p class="description-2 textos">
+                    Siguiendo con nuestra introducción a AJAX, aquí está un ejemplo que usa el objeto XMLHttpRequest API para inicializar una solicitud AJAX. 
+                </p>
+                <!-- html -->
+                <div class="ajax-peticion">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/Einstein.jpg" alt="Einstein">
+                    <button id="request" class="texto">Más información sobre
+                        Einstein</button>
+                    <div id="bio" class="textos"></div>
+                  </div>
+                  <div class="explicacion-ajax textos">
+                    Aquí está lo que queremos que pase: cuando hagamos clic sobre el botón, una solicitud AJAX será ejecutada. Luego, el elemento con el id bio aparecerá y su contenido estará lleno con datos de respuesta.
+
+                    Debajo está el código AJAX y HTML que requerimos:  
+                  </div>
+                <pre class="language-html line-numbers" style="white-space:pre-wrap;">
+                    <code>
+                        &lt;div&gt;
+                        &lt;img src="Einstein.jpg" alt="Einstein"&gt;
+                        &lt;button id="request"&gt;Learn more about Einstein&lt;/button&gt;
+                        &lt;div id="bio"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    </code>
+                </pre>
+                <!-- javascript ajax -->
+                <pre class="language-js line-numbers" style="white-space:pre-wrap;">
+                    <code>
+                        &lt;script&gt;
+                        var btn = document.getElementById('request');
+                        var bio = document.getElementById('bio');
+                         
+                        var request = new XMLHttpRequest();
+                         
+                        request.onreadystatechange = function() {
+                          if(request.readyState === 4) {
+                            bio.style.border = '1px solid #e8e8e8';
+                            if(request.status === 200) { 
+                              bio.innerHTML = request.responseText;
+                            } else {
+                              bio.innerHTML = 'An error occurred during your request: ' +  request.status + ' ' + request.statusText;
+                            } 
+                          }
+                        }
+                         
+                        request.open('Get', 'Bio.txt');
+                         
+                        btn.addEventListener('click', function() {
+                          this.style.display = 'none';
+                          request.send();
+                        });
+                        &lt;/script&gt;
+                    </code>
+            </div>
         </section>
     </main>
+    <script src="./js/prism.js"></script>
+    <script src="./js/ajax.js"></script>
+    <script src="./js/app.js" type="module"></script>
 </body>
 </html>
